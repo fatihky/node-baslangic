@@ -23,11 +23,15 @@ var session = require('express-session')
 // kontrolcüler yol_fonksiyonlari.push() ile uygulamaya dail olacak 
 GLOBAL.yol_fonksiyonlari = [
 	["get:/hello/world", function(req,res){
+		res.set('Content-Type', 'text/html; charset=utf-8')
+		res.end('hello world')
+	}],
+	["get:/", function(req,res){
 		res.end('hello world')
 	}]
 ];
 
-app.use(iroute.connect(route_array));
+app.use(iroute.connect(yol_fonksiyonlari));
 
 app.use( ifile.connect( [["/dosyalar", __dirname]] ) ); 
 app.use( express.json() );
@@ -39,10 +43,6 @@ require('./modeller/uye');
 require('./kontrolcüler/uye');
 
 // Bu kısım zaten deneme kısmı. Bu dosyada kalacak //
-app.get('/', function(req, res){
-  res.send('hello world');
-});
-
 app.get('/ayarla/:anahtar/:deger', function(req, res){
 	req.session[req.params.anahtar] = req.params.deger;
 	res.send('hello world');
