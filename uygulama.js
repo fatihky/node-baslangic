@@ -1,6 +1,9 @@
 // ===============================================
 // Node.js Başlangıç Uygulaması
 // ===============================================
+// git add *
+// git commit -m "deneme"
+// git push -u origin master
 
 // Bu kısmı genel-ayarlamalar.js dosyasına atacağım //
 GLOBAL.express 		= require('express')
