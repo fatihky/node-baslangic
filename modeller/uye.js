@@ -6,6 +6,7 @@ GLOBAL.uyeSemasi = new Schema({
 	isim:  String,
 	soyisim: String,
 	kullanici_adi: String,
+	cinsiyet: Number, // 1: Erkek, 2: Kadın
 	ozetlenmis_sifre: String
 });
 

@@ -17,6 +17,8 @@
     "validator": "*",
     "mongoose-query-paginate": "*",
     "password-hash": "*",
+    "ifile": "*",
+    "iroute": "*",
     "hiredis": "*"
   },
   "repository": {
